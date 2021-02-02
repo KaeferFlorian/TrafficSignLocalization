@@ -1,2 +1,6 @@
 /BelgiumTSC
 /.ipynb_checkpoints
+history_accuracy.npy
+history_iou.npy
+history_loss.npy
+model_tsc.pt
