@@ -78,19 +78,6 @@ dfTrain
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -645,7 +632,7 @@ model.to(device)
 
 For the classification task, we use a Cross-Entropy loss function.
 
-There are multiple ways to compute the loss for bounding box regression. We use a standard L1 Loss function (Least Absolute Deviations) to minimize the sum of all the absolute differences between the true value and the predicted value. Another approach is to compute the area of overlap between the true box and the target box and devide this number by the area of intersection. This is called Intersection over Union (IoU) and the reader is reffered to this publication for further details and comparissons (https://giou.stanford.edu/GIoU.pdf). However, we compute the IoUs and use the average IoU as a metric for visualization purposes.
+There are multiple ways to compute the loss for bounding box regression. We use a standard L1 Loss function (Least Absolute Deviations) to minimize the sum of all the absolute differences between the true value and the predicted value. Another approach is to compute the area of overlap between the true box and the target box and devide this number by the area of intersection. This is called Intersection over Union (IoU) and the reader is refered to this publication for further details and comparissons (https://giou.stanford.edu/GIoU.pdf). However, we compute the IoUs and use the average IoU as a metric for visualization purposes.
 
 In addition, we need to weight each class by its frequency to account for the imbalance (as shown above). On the other hand, the two loss functions need to be weighted against each other.
 
